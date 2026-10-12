@@ -1,0 +1,88 @@
+//Colors
+Main Background
+#030B17
+Body and outer background
+
+Section Background
+#071322
+Alternate sections
+
+Card Background
+#0B192C
+Project and skill cards
+
+Navbar Background
+#050F1E
+Sticky navigation
+
+Primary Cyan
+#00BFFF
+Buttons, active links
+
+Light Cyan
+#67E8F9
+Accent text, highlights
+
+Main Text
+#F8FAFC
+Headings and titles
+
+Secondary Text
+#94A3B8
+Paragraphs and captions
+
+Border
+#1E3550
+Card and input borders
+
+Success Green
+#34D399
+Status indicators
+
+
+//Gradient
+Primary button gradient
+#00BFFF → #0077FF
+
+Hero glow
+#123D65 → #030B17
+
+Card surface
+#0B192C → #132A46
+
+Highlighted heading
+White → Light Cyan → Cyan
+
+//EXAMPLE
+box-shadow: 0 0 24px rgba(0, 191, 255, 0.22);
+
+
+//Fonts
+Aa Bb Cc
+Space Grotesk
+Headings, hero name, section titles
+Weights: 500, 600, 700
+
+Aa Bb Cc
+Inter
+Paragraphs, buttons, navigation, cards
+Weights: 400, 500, 600
+
+
+JetBrains Mono
+Code snippets, technical labels, section numbering
+Weights: 400, 500
+
+Element	Desktop	Mobile	Weight
+Hero name	88px	44px	700
+Hero role	30px	20px	600
+Hero description	17px	15px	400
+Section heading	42px	30px	700
+Section subtitle	16px	14px	400
+Project title	26px	22px	600
+Card heading	18px	17px	600
+Body text	16px	15px	400
+Navigation	14px	14px	500
+Buttons	14px	14px	600
+Section label	12px	11px	600
+Footer text	13px	12px	400

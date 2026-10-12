@@ -1,0 +1,249 @@
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 91vh;
+  padding: 100px 24px 90px;
+  text-align: center;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+
+  background-image: url("../assets/hero-bg.svg");
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(2px);
+  z-index: -1;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  background-color: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.badge-text {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+
+.hero-greeting {
+  margin: 0 0 4px;
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 400;
+  color: var(--text);
+}
+
+.hero-title {
+  margin: 0;
+  font-family: var(--heading);
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  color: var(--text);
+}
+
+.hero-title span {
+  color: var(--accent);
+}
+
+.hero-role {
+  margin: 8px 0 14px;
+  font-family: var(--heading);
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--accent-light);
+}
+
+.hero-description {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 1.7;
+  color: var(--secondaryText);
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--bg);
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background-color: rgba(5, 15, 30, 0.7);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--secondaryText);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero-scroll span {
+  font-size: 18px;
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 93vh;
+    padding: 80px 20px 90px;
+  }
+
+  .hero-title {
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    max-width: 430px;
+  }
+
+  .hero-actions {
+    gap: 12px;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 90vh;
+    padding: 70px 16px 85px;
+  }
+
+  .hero-badge {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .badge-text {
+    font-size: 9px;
+    letter-spacing: 0.3px;
+  }
+
+  .hero-title {
+    font-size: clamp(34px, 9vw, 42px);
+    letter-spacing: -1px;
+  }
+
+  .hero-role {
+    font-size: clamp(18px, 5vw, 22px);
+  }
+
+  .hero-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 16px;
+    font-size: 12px;
+  }
+
+  .hero-scroll {
+    bottom: 20px;
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary,
+  .btn-secondary {
+    transition: none;
+  }
+}
